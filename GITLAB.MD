@@ -21,3 +21,32 @@ cd /home/gitlab-runner/
 ls -al
 rm .bash_logout
 ```
+
+pipeline
+```
+stages:
+ - build
+ - test
+ - integration
+ - prod
+
+job_build:
+ stage: build
+ script:
+  - echo "This is a build stage"
+
+jon_test:
+ stage: test
+ script:
+  - echo "This is a test stage"
+
+job_integration:
+ stage: integration
+ script:
+  - echo "This is an integration stage"
+
+job_prod:
+ stage: prod
+ script:
+  - echo "This is a deploy stage"
+```
